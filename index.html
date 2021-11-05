@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/favicon.png" />
+    <link rel="stylesheet" href="style.css"/>
+    <title>PWA</title>
+</head>
+<body>
+    <div class="container">
+        <img src="assets/bollen-logo.png" />
+        <form id="afspraak-form">
+            <input required type="email" placeholder="Email" name="email" />
+            <input type="text" placeholder="Name" name="name" />
+            <select required name="type" aria-placeholder="Type">
+                <option disabled selected value> -- Selecteer type -- </option>
+                <option value="Herstelling">Herstelling</option>
+                <option value="Leveren producten">Leveren producten</option>
+                <option value="Zomeronderhoud">Zomeronderhoud</option>
+                <option value="Winteronderhoud">Winteronderhoud</option>
+            </select>
+            <div>
+                <input type="checkbox" id="afternoon" value="afternoon" name="afternoon" />
+                <label for="afternoon">Afternoon</label>
+            </div>
+            <input type="submit" value="Send" />
+        </form>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
