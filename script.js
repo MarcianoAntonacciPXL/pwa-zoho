@@ -5,8 +5,8 @@ form.addEventListener("submit", (e) => {
     //const url = "http://localhost:3000";
     const url = "https://awesome-wescoff-1f766c.netlify.app/.netlify/functions/api";
     const http = new XMLHttpRequest();
-    //http.open("POST", url, true);
-    http.open("GET", url, true);
+    http.open("POST", url, true);
+    //http.open("GET", url, true);
     http.setRequestHeader("Content-type", "application/json");
     http.setRequestHeader('X-Requested-With', 'XMLHttpRequest'); 
     http.setRequestHeader('Access-Control-Allow-Origin', '*');
@@ -19,6 +19,6 @@ form.addEventListener("submit", (e) => {
     const data = new FormData(e.target);
     const values = Object.fromEntries(data.entries());
     const json = JSON.stringify(values);
-    //http.send(json);    
-    http.send();
+    http.send(json);    
+    //http.send();
 });
